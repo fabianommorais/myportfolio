@@ -479,7 +479,7 @@ section {
   margin-bottom: 2rem;
 }
 
-.form-group {
+.form-group, .g-recaptcha {
   margin-bottom: 1.5rem;
 }
 
