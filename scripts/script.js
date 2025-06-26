@@ -254,14 +254,14 @@
             const message = lang === 'pt' ? 'Mensagem enviada! Entrarei em contato em breve.' :
                             lang === 'en' ? 'Message sent! I will contact you soon.' :
                             'Message envoyé ! Je vous contacte bientôt.';
-            const recaptchaToken = grecaptcha.getResponse();
-            if (!recaptchaToken) {
-                alert('Por favor, marque o reCAPTCHA antes de enviar.');
-                return;
-            }
+            // const recaptchaToken = grecaptcha.getResponse();
+            // if (!recaptchaToken) {
+            //     alert('Por favor, marque o reCAPTCHA antes de enviar.');
+            //     return;
+            // }
 
             const formData = new FormData(form);
-            formData.append('g-recaptcha-response', recaptchaToken);
+            // formData.append('g-recaptcha-response', recaptchaToken);
             try {
                 const response = await fetch(form.action, {
                     method: 'POST',
