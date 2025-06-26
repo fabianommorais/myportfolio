@@ -248,15 +248,41 @@
         
         // Form Submission
         const form = document.querySelector('form');
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const lang = localStorage.getItem('language') || 'pt';
             const message = lang === 'pt' ? 'Mensagem enviada! Entrarei em contato em breve.' :
-                         lang === 'en' ? 'Message sent! I will contact you soon.' :
-                         'Message envoyé ! Je vous contacte bientôt.';
-                         
-            alert(message);
-            form.reset();
+                            lang === 'en' ? 'Message sent! I will contact you soon.' :
+                            'Message envoyé ! Je vous contacte bientôt.';
+            const recaptchaToken = grecaptcha.getResponse();
+            if (!recaptchaToken) {
+                alert('Por favor, marque o reCAPTCHA antes de enviar.');
+                return;
+            }
+
+            const formData = new FormData(form);
+            formData.append('g-recaptcha-response', recaptchaToken);
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    alert(message);
+                    form.reset();
+                    grecaptcha.reset();
+                } else {
+                    alert('Erro ao enviar a mensagem. Por favor, tente novamente.');
+                }
+            } catch (error) {
+                alert('Erro de conexão. Verifique sua internet.');
+            }
+            // alert(message);
+            // form.reset();
         });
         
         // Seletor de idioma
