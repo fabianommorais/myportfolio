@@ -261,7 +261,7 @@
             }
 
             const formData = new FormData(form);
-            formData.append('g-recaptcha-response', recaptchaToken);
+            // formData.append('g-recaptcha-response', recaptchaToken);
             try {
                 const response = await fetch(form.action, {
                     method: 'POST',
