@@ -251,17 +251,25 @@
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const lang = localStorage.getItem('language') || 'pt';
-            const message = lang === 'pt' ? 'Mensagem enviada! Entrarei em contato em breve.' :
+            const messageOk = lang === 'pt' ? 'Mensagem enviada! Entrarei em contato em breve.' :
                             lang === 'en' ? 'Message sent! I will contact you soon.' :
-                            'Message envoyé ! Je vous contacte bientôt.';
+                            "Message envoyé ! Je vous contacte bientôt.";
+            const messageWarning = lang === 'pt' ? 'Por favor, marque o reCAPTCHA antes de enviar.' :
+                            lang === 'en' ? 'Please check the reCAPTCHA before sending.' :
+                            "Veuillez cocher le reCAPTCHA avant d'envoyer."
+            const messageErrorServer = lang === 'pt' ? 'Erro ao enviar a mensagem. Por favor, tente novamente.' :
+                            lang === 'en' ? 'Error sending message. Please try again.' :
+                            "Erreur dans l'envoi du message. Veuillez réessayer."
+            const messageErrorClient = lang === 'pt' ? 'Erro de conexão. Verifique sua internet.' :
+                            lang === 'en' ? 'Connection error. Check your internet.' :
+                            "Erreur de connexion. Vérifiez votre connexion internet."
             const recaptchaToken = grecaptcha.getResponse();
             if (!recaptchaToken) {
-                alert('Por favor, marque o reCAPTCHA antes de enviar.');
+                alert(messageWarning);
                 return;
             }
 
             const formData = new FormData(form);
-            // formData.append('g-recaptcha-response', recaptchaToken);
             try {
                 const response = await fetch(form.action, {
                     method: 'POST',
@@ -272,14 +280,14 @@
                 });
 
                 if (response.ok) {
-                    alert(message);
+                    alert(messageOk);
                     form.reset();
                     grecaptcha.reset();
                 } else {
-                    alert('Erro ao enviar a mensagem. Por favor, tente novamente.');
+                    alert(messageErrorServer);
                 }
             } catch (error) {
-                alert('Erro de conexão. Verifique sua internet.');
+                alert(messageErrorClient);
             }
         });
         
