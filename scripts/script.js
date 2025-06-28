@@ -1,6 +1,6 @@
 let translations = {}
 
-fetch("/myportfolio/scripts/translations.json")
+fetch("./translations.json")
   .then((response) => response.json())
   .then((data) => {
     translations = data
