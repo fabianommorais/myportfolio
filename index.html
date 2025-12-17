@@ -1,289 +1,455 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <title data-i18n="title.title">Fabiano Morais | Desenvolvedor Full Stack</title>
-    <meta name="description" content="Desenvolvedor Full Stack com experiência em React, C#, .NET e infraestrutura de TI. Portfólio profissional, projetos, contato e mais.">
-    <meta name="keywords" content="Desenvolvedor Full Stack, React, C#, .NET, Portfólio, Fabiano Morais, Desenvolvedor Web, Infraestrutura de TI">
-    <meta name="author" content="Fabiano Morais">
-    <meta http-equiv="Content-Language" content="pt-BR">
-    <meta charset="UTF-8">
-    <link rel="canonical" href="https://www.fabianomorais.eti.br/">
-    <meta property="og:title" content="Fabiano Morais | Desenvolvedor Full Stack" />
-    <meta property="og:description" content="Portfólio profissional com projetos de React, C# e infraestrutura de TI." />
-    <meta property="og:image" content="https://www.fabianomorais.eti.br/public/img/preview.png" />
+  <head>
+    <title data-i18n="title.title">
+      Fabiano Morais | Desenvolvedor Full Stack
+    </title>
+    <meta
+      name="description"
+      content="Desenvolvedor Full Stack com experiência em React, C#, .NET e infraestrutura de TI. Portfólio profissional, projetos, contato e mais."
+    />
+    <meta
+      name="keywords"
+      content="Desenvolvedor Full Stack, React, C#, .NET, Portfólio, Fabiano Morais, Desenvolvedor Web, Infraestrutura de TI"
+    />
+    <meta name="author" content="Fabiano Morais" />
+    <meta http-equiv="Content-Language" content="pt-BR" />
+    <meta charset="UTF-8" />
+    <link rel="canonical" href="https://www.fabianomorais.eti.br/" />
+    <meta
+      property="og:title"
+      content="Fabiano Morais | Desenvolvedor Full Stack"
+    />
+    <meta
+      property="og:description"
+      content="Portfólio profissional com projetos de React, C# e infraestrutura de TI."
+    />
+    <meta
+      property="og:image"
+      content="https://www.fabianomorais.eti.br/public/img/preview.png"
+    />
     <meta property="og:url" content="https://www.fabianomorais.eti.br" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Fabiano Morais | Desenvolvedor Full Stack" />
-    <meta name="twitter:description" content="Portfólio profissional com foco em React, .NET e infraestrutura." />
-    <meta name="twitter:image" content="https://www.fabianomorais.eti.br/public/img/preview.png" />
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="./styles/styles.css">
+    <meta
+      name="twitter:title"
+      content="Fabiano Morais | Desenvolvedor Full Stack"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfólio profissional com foco em React, .NET e infraestrutura."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.fabianomorais.eti.br/public/img/preview.png"
+    />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Cabeçalho -->
     <header>
-        <a href="#home" class="logo">Fabiano Morais</a>
-        <nav>
-            <ul class="mobile-menu">
-                <li><a href="#home" data-i18n="header.home">Início</a></li>
-                <li><a href="#about" data-i18n="header.about">Sobre</a></li>
-                <li><a href="#portfolio" data-i18n="header.portfolio">Portfólio</a></li>
-                <li><a href="#contact" data-i18n="header.contact">Contato</a></li>
-                <li>
-                    <select id="language-select" class="lang-switcher">
-                        <option value="pt" selected data-i18n="lang.pt">Português</option>
-                        <option value="en" data-i18n="lang.en">English</option>
-                        <option value="fr" data-i18n="lang.fr">Français</option>
-                    </select>
-                </li>
-            </ul>
-        </nav>
-        <div class="mobile-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
+      <a href="#home" class="logo">Fabiano Morais</a>
+      <nav>
+        <ul class="mobile-menu">
+          <li><a href="#home" data-i18n="header.home">Início</a></li>
+          <li><a href="#about" data-i18n="header.about">Sobre</a></li>
+          <li>
+            <a href="#portfolio" data-i18n="header.portfolio">Portfólio</a>
+          </li>
+          <li><a href="#contact" data-i18n="header.contact">Contato</a></li>
+          <li>
+            <select id="language-select" class="lang-switcher">
+              <option value="pt" selected data-i18n="lang.pt">Português</option>
+              <option value="en" data-i18n="lang.en">English</option>
+              <option value="fr" data-i18n="lang.fr">Français</option>
+            </select>
+          </li>
+        </ul>
+      </nav>
+      <div class="mobile-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
     </header>
 
     <!-- Seção Home -->
-    <section id="home" style="min-height: 80vh; padding-top: 10rem;">
-        <div class="home-content">
-            <h1 data-i18n="home.title">Desenvolvedor <span class="highlight">Full Stack</span> com experiência em <span class="highlight">Infraestrutura de TI</span></h1>
-            <p data-i18n="home.subtitle">Especialista em criar soluções robustas utilizando tecnologias modernas como React, JavaScript, C# com sólida base na configuração e manutenção de ambientes de TI.</p>
-            
-            <div class="tagline">
-                <i class="fas fa-server"></i>
-                <span data-i18n="home.tagline">Integração perfeita entre desenvolvimento e infraestrutura</span>
-            </div>
-            
-            <div class="tech-icons">
-                <div class="tech-icon react" title="React">
-                    <i class="fab fa-react"></i>
-                </div>
-                <div class="tech-icon js" title="JavaScript">
-                    <i class="fab fa-js"></i>
-                </div>
-                <div class="tech-icon csharp" title="C#">
-                    <i class="fab fa-microsoft"></i>
-                </div>
-                <div class="tech-icon mariadb" title="MariaDB">
-                    <i class="fas fa-database"></i>
-                </div>
-                <div class="tech-icon java" title="Java">
-                    <i class="fab fa-java"></i>
-                </div>
-                <div class="tech-icon sql" title="SQL Server">
-                    <i class="fas fa-database"></i>
-                </div>
-                <div class="tech-icon azure" title="Azure">
-                    <i class="fab fa-microsoft"></i>
-                </div>
-                <div class="tech-icon aws" title="AWS">
-                    <i class="fab fa-aws"></i>
-                </div>
-                <div class="tech-icon docker" title="Docker">
-                    <i class="fab fa-docker"></i>
-                </div>
-            </div>
-            
-            <div class="cta-buttons">
-                <a href="#portfolio" class="btn btn-primary" data-i18n="home.projectsBtn">Ver Projetos</a>
-                <a href="#contact" class="btn btn-secondary" data-i18n="home.contactBtn">Entre em Contato</a>
-            </div>
+    <section id="home" style="min-height: 80vh; padding-top: 10rem">
+      <div class="home-content">
+        <h1 data-i18n="home.title">
+          Desenvolvedor <span class="highlight">Full Stack</span> com
+          experiência em <span class="highlight">Infraestrutura de TI</span>
+        </h1>
+        <p data-i18n="home.subtitle">
+          Especialista em criar soluções robustas utilizando tecnologias
+          modernas como React, JavaScript, C# com sólida base na configuração e
+          manutenção de ambientes de TI.
+        </p>
+
+        <div class="tagline">
+          <i class="fas fa-server"></i>
+          <span data-i18n="home.tagline"
+            >Integração perfeita entre desenvolvimento e infraestrutura</span
+          >
         </div>
+
+        <div class="tech-icons">
+          <div class="tech-icon react" title="React">
+            <i class="fab fa-react"></i>
+          </div>
+          <div class="tech-icon js" title="JavaScript">
+            <i class="fab fa-js"></i>
+          </div>
+          <div class="tech-icon csharp" title="C#">
+            <i class="fab fa-microsoft"></i>
+          </div>
+          <div class="tech-icon mariadb" title="MariaDB">
+            <i class="fas fa-database"></i>
+          </div>
+          <div class="tech-icon java" title="Java">
+            <i class="fab fa-java"></i>
+          </div>
+          <div class="tech-icon sql" title="SQL Server">
+            <i class="fas fa-database"></i>
+          </div>
+          <div class="tech-icon azure" title="Azure">
+            <i class="fab fa-microsoft"></i>
+          </div>
+          <div class="tech-icon aws" title="AWS">
+            <i class="fab fa-aws"></i>
+          </div>
+          <div class="tech-icon docker" title="Docker">
+            <i class="fab fa-docker"></i>
+          </div>
+        </div>
+
+        <div class="cta-buttons">
+          <a
+            href="#portfolio"
+            class="btn btn-primary"
+            data-i18n="home.projectsBtn"
+            >Ver Projetos</a
+          >
+          <a
+            href="#contact"
+            class="btn btn-secondary"
+            data-i18n="home.contactBtn"
+            >Entre em Contato</a
+          >
+        </div>
+      </div>
     </section>
 
     <!-- Seção Sobre -->
     <section id="about">
-        <div class="about-section">
-            <div class="about-image">
-                <img src="./public/img/img_aboutMe.jpg" alt="Desenvolvedor">
-            </div>
-            <div class="about-content">
-                <h2 data-i18n="about.title">Sobre mim</h2>
-                <p data-i18n="about.desc1">Como desenvolvedor júnior com foco em tecnologias web e .NET, combino conhecimentos recentes de programação com experiência na área de infraestrutura de TI.</p>
-                <p data-i18n="about.desc2">Minha formação em Análise e Desenvolvimento de Sistemas me permite entender tanto desenvolvimento quanto ambientes de produção.</p>
-                <p><strong data-i18n="about.specialties">Especializações:</strong><br>
-                - <span data-i18n="about.spec1">Desenvolvimento de aplicativos web com React.js e ASP.NET</span><br>
-                - <span data-i18n="about.spec2">Integrações entre sistemas legados e novas tecnologias</span><br>
-                - <span data-i18n="about.spec3">Otimização de deploy e configuração de ambientes cloud</span><br>
-                - <span data-i18n="about.spec4">Melhoria de performance em sistemas empresariais</span></p>
-                
-                <div class="skills">
-                    <h3 class="skill-title" data-i18n="about.skills">Minhas habilidades</h3>
-                    <div class="skill-bars">
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span data-i18n="skills.frontend">Frontend (React/JS)</span>
-                                <span>85%</span>
-                            </div>
-                            <div class="bar">
-                                <div class="bar-fill" style="background-color: var(--primary); width:85%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span data-i18n="skills.csharp">C# & ASP.NET</span>
-                                <span>75%</span>
-                            </div>
-                            <div class="bar">
-                                <div class="bar-fill" style="background-color: var(--primary); width:75%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span data-i18n="skills.infrastructure">Infraestrutura & redes</span>
-                                <span>90%</span>
-                            </div>
-                            <div class="bar">
-                                <div class="bar-fill" style="background-color: var(--primary); width:90%"></div>
-                            </div>
-                        </div>
-                        
-                        <div class="skill-bar">
-                            <div class="skill-info">
-                                <span data-i18n="skills.database">Banco de Dados</span>
-                                <span>80%</span>
-                            </div>
-                            <div class="bar">
-                                <div class="bar-fill" style="background-color: var(--primary); width:80%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="about-section">
+        <div class="about-image">
+          <img src="./public/img/img_aboutMe.jpg" alt="Desenvolvedor" />
         </div>
+        <div class="about-content">
+          <h2 data-i18n="about.title">Sobre mim</h2>
+          <p data-i18n="about.desc1">
+            Como desenvolvedor júnior com foco em tecnologias web e .NET,
+            combino conhecimentos recentes de programação com experiência na
+            área de infraestrutura de TI.
+          </p>
+          <p data-i18n="about.desc2">
+            Minha formação em Análise e Desenvolvimento de Sistemas me permite
+            entender tanto desenvolvimento quanto ambientes de produção.
+          </p>
+          <p>
+            <strong data-i18n="about.specialties">Especializações:</strong
+            ><br />
+            -
+            <span data-i18n="about.spec1"
+              >Desenvolvimento de aplicativos web com React.js e ASP.NET</span
+            ><br />
+            -
+            <span data-i18n="about.spec2"
+              >Integrações entre sistemas legados e novas tecnologias</span
+            ><br />
+            -
+            <span data-i18n="about.spec3"
+              >Otimização de deploy e configuração de ambientes cloud</span
+            ><br />
+            -
+            <span data-i18n="about.spec4"
+              >Melhoria de performance em sistemas empresariais</span
+            >
+          </p>
+
+          <div class="skills">
+            <h3 class="skill-title" data-i18n="about.skills">
+              Minhas habilidades
+            </h3>
+            <div class="skill-bars">
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span data-i18n="skills.frontend">Frontend (React/JS)</span>
+                  <span>85%</span>
+                </div>
+                <div class="bar">
+                  <div
+                    class="bar-fill"
+                    style="background-color: var(--primary); width: 85%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span data-i18n="skills.csharp">C# & ASP.NET</span>
+                  <span>75%</span>
+                </div>
+                <div class="bar">
+                  <div
+                    class="bar-fill"
+                    style="background-color: var(--primary); width: 75%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span data-i18n="skills.infrastructure"
+                    >Infraestrutura & redes</span
+                  >
+                  <span>90%</span>
+                </div>
+                <div class="bar">
+                  <div
+                    class="bar-fill"
+                    style="background-color: var(--primary); width: 90%"
+                  ></div>
+                </div>
+              </div>
+
+              <div class="skill-bar">
+                <div class="skill-info">
+                  <span data-i18n="skills.database">Banco de Dados</span>
+                  <span>80%</span>
+                </div>
+                <div class="bar">
+                  <div
+                    class="bar-fill"
+                    style="background-color: var(--primary); width: 80%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Seção Portfólio -->
     <section id="portfolio">
-        <h2 class="section-title" data-i18n="portfolio.title">Meus <span>Projetos</span></h2>
-        
-        <div class="projects">
-            <div class="project-card">
-                <div class="project-image">
-                    <span data-i18n="projects.project1.title">ERP Web</span>
-                </div>
-                <div class="project-content">
-                    <h3 data-i18n="projects.project1.title">ERP Empresarial Web</h3>
-                    <p data-i18n="projects.project1.desc">Aplicação completa feita com .NET Core no backend e React no frontend para gerenciamento de recursos empresariais.</p>
-                    
-                    <div class="tech-used">
-                        <span>React</span>
-                        <span>C#</span>
-                        <span>SQL Server</span>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="#" class="btn btn-secondary" data-i18n="projects.details">Detalhes</a>
-                    </div>
-                </div>
+      <h2 class="section-title" data-i18n="portfolio.title">
+        Meus <span>Projetos</span>
+      </h2>
+
+      <div class="projects">
+        <div class="project-card">
+          <div class="project-image">
+            <span data-i18n="projects.project1.title">ERP Web</span>
+          </div>
+          <div class="project-content">
+            <h3 data-i18n="projects.project1.title">ERP Empresarial Web</h3>
+            <p data-i18n="projects.project1.desc">
+              Aplicação completa feita com .NET Core no backend e React no
+              frontend para gerenciamento de recursos empresariais.
+            </p>
+
+            <div class="tech-used">
+              <span>React</span>
+              <span>C#</span>
+              <span>SQL Server</span>
             </div>
-            
-            <div class="project-card">
-                <div class="project-image">
-                    <span data-i18n="projects.project2.title">Dashboard IoT</span>
-                </div>
-                <div class="project-content">
-                    <h3 data-i18n="projects.project2.title">Monitoramento de Infraestrutura</h3>
-                    <p data-i18n="projects.project2.desc">Sistema de monitoramento de infraestrutura com visualização de dados em tempo real e alertas.</p>
-                    
-                    <div class="tech-used">
-                        <span>JavaScript</span>
-                        <span>Charts.js</span>
-                        <span>AWS</span>
-                        <span>Zabbix</span>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="#" class="btn btn-secondary" data-i18n="projects.details">Detalhes</a>
-                    </div>
-                </div>
+
+            <div class="project-links">
+              <a href="#" class="btn btn-secondary" data-i18n="projects.details"
+                >Detalhes</a
+              >
             </div>
-            
-            <div class="project-card">
-                <div class="project-image">
-                    <span data-i18n="projects.project3.title">API Gateway</span>
-                </div>
-                <div class="project-content">
-                    <h3 data-i18n="projects.project3.title">Portal de Integração de API</h3>
-                    <p data-i18n="projects.project3.desc">Interface moderna para consumo e integração de múltiplas APIs públicas e privadas.</p>
-                    
-                    <div class="tech-used">
-                        <span>React.js</span>
-                        <span>Node.js</span>
-                        <span>Express</span>
-                    </div>
-                    
-                    <div class="project-links">
-                        <a href="#" class="btn btn-secondary" data-i18n="projects.details">Detalhes</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <span data-i18n="projects.project2.title">Dashboard IoT</span>
+          </div>
+          <div class="project-content">
+            <h3 data-i18n="projects.project2.title">
+              Monitoramento de Infraestrutura
+            </h3>
+            <p data-i18n="projects.project2.desc">
+              Sistema de monitoramento de infraestrutura com visualização de
+              dados em tempo real e alertas.
+            </p>
+
+            <div class="tech-used">
+              <span>JavaScript</span>
+              <span>Charts.js</span>
+              <span>AWS</span>
+              <span>Zabbix</span>
+            </div>
+
+            <div class="project-links">
+              <a href="#" class="btn btn-secondary" data-i18n="projects.details"
+                >Detalhes</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <span data-i18n="projects.project3.title">API Gateway</span>
+          </div>
+          <div class="project-content">
+            <h3 data-i18n="projects.project3.title">
+              Portal de Integração de API
+            </h3>
+            <p data-i18n="projects.project3.desc">
+              Interface moderna para consumo e integração de múltiplas APIs
+              públicas e privadas.
+            </p>
+
+            <div class="tech-used">
+              <span>React.js</span>
+              <span>Node.js</span>
+              <span>Express</span>
+            </div>
+
+            <div class="project-links">
+              <a href="#" class="btn btn-secondary" data-i18n="projects.details"
+                >Detalhes</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Seção Contato -->
     <section id="contact" class="contact">
-        <div class="contact-info">
-            <h2 data-i18n="contact.title">Vamos trabalhar juntos!</h2>
-            <p data-i18n="contact.description">Estou disponível para novas oportunidades e projetos desafiadores. Entre em contato para conversarmos sobre como posso ajudar.</p>
-        </div>
-        
-        <div class="contact-form">
-            <h3 data-i18n="contact.formTitle">Envie uma mensagem</h3>
-            <form action="https://formspree.io/f/mjkrpjpg" method="POST">
-                <div class="form-group">
-                    <label for="name" data-i18n="contact.nameLabel">Nome</label>
-                    <input type="text" id="name" name="name" class="form-control" data-i18n-placeholder="contact.namePlaceholder" placeholder="Seu nome" required />
-                </div>
-                
-                <div class="form-group">
-                    <label for="email" data-i18n="contact.emailLabel">Email</label>
-                    <input type="email" id="email" name="email" class="form-control" data-i18n-placeholder="contact.emailPlaceholder" placeholder="seu@email.com" required />
-                </div>
-                
-                <div class="form-group">
-                    <label for="subject" data-i18n="contact.subjectLabel">Assunto</label>
-                    <input type="text" id="subject" name="subject" class="form-control" data-i18n-placeholder="contact.subjectPlaceholder" placeholder="Assunto" required />
-                </div>
-                
-                <div class="form-group">
-                    <label for="message" data-i18n="contact.messageLabel">Mensagem</label>
-                    <textarea id="message" name="message" class="form-control" data-i18n-placeholder="contact.messagePlaceholder" placeholder="Sua mensagem..." required></textarea>
-                </div>
+      <div class="contact-info">
+        <h2 data-i18n="contact.title">Vamos trabalhar juntos!</h2>
+        <p data-i18n="contact.description">
+          Estou disponível para novas oportunidades e projetos desafiadores.
+          Entre em contato para conversarmos sobre como posso ajudar.
+        </p>
+      </div>
 
-                <div class="g-recaptcha" data-sitekey="6LdvC28rAAAAAE2D6rF57L9P1aEVjHnpQPI-qj26"></div>
-                <button type="submit" class="btn-form" data-i18n="contact.sendBtn">Enviar Mensagem</button>
-            </form>
-        </div>
+      <div class="contact-form">
+        <h3 data-i18n="contact.formTitle">Envie uma mensagem</h3>
+        <form action="https://formspree.io/f/mjkrpjpg" method="POST">
+          <div class="form-group">
+            <label for="name" data-i18n="contact.nameLabel">Nome</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control"
+              data-i18n-placeholder="contact.namePlaceholder"
+              placeholder="Seu nome"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email" data-i18n="contact.emailLabel">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              data-i18n-placeholder="contact.emailPlaceholder"
+              placeholder="seu@email.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="subject" data-i18n="contact.subjectLabel"
+              >Assunto</label
+            >
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              class="form-control"
+              data-i18n-placeholder="contact.subjectPlaceholder"
+              placeholder="Assunto"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message" data-i18n="contact.messageLabel"
+              >Mensagem</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              class="form-control"
+              data-i18n-placeholder="contact.messagePlaceholder"
+              placeholder="Sua mensagem..."
+              required
+            ></textarea>
+          </div>
+
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LdvC28rAAAAAE2D6rF57L9P1aEVjHnpQPI-qj26"
+          ></div>
+          <button type="submit" class="btn-form" data-i18n="contact.sendBtn">
+            Enviar Mensagem
+          </button>
+        </form>
+      </div>
     </section>
 
     <!-- Rodapé -->
     <footer>
-        <div class="footer-content">
-            <div class="logo">Fabiano Morais</div>
-            <p class="footer-text" data-i18n="footer.description">Desenvolvedor Full Stack especializado em React, JavaScript e C# com experiência em infraestrutura de TI e soluções Azure.</p>
-            
-            <div class="footer-socials">
-                <a href="https://www.linkedin.com/in/fabianommorais/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/fabianommorais" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="https://x.com/moraismfabiano" class="social-link"><i class="fab fa-x-twitter"></i></a>
-            </div>
-            
-            <p class="copyright">&copy; <span id="current-year"></span> - <span data-i18n="footer.rights">Todos os direitos reservados</span></p>
+      <div class="footer-content">
+        <div class="logo">Fabiano Morais</div>
+        <p class="footer-text" data-i18n="footer.description">
+          Desenvolvedor Full Stack especializado em React, JavaScript e C# com
+          experiência em infraestrutura de TI e soluções Azure.
+        </p>
+
+        <div class="footer-socials">
+          <a
+            href="https://www.linkedin.com/in/fabianommorais/"
+            class="social-link"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="https://github.com/fabianommorais" class="social-link"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://x.com/moraismfabiano" class="social-link"
+            ><i class="fab fa-x-twitter"></i
+          ></a>
         </div>
+
+        <p class="copyright">
+          &copy; <span id="current-year"></span> -
+          <span data-i18n="footer.rights">Todos os direitos reservados</span>
+        </p>
+      </div>
     </footer>
 
     <div id="lang-indicator" class="lang-indicator">
-        <i class="fas fa-globe"></i>
-        <span id="lang-name" data-i18n=""></span>
+      <i class="fas fa-globe"></i>
+      <span id="lang-name" data-i18n=""></span>
     </div>
 
-    <script src="./scripts/script.js"> </script>
-</body>
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>

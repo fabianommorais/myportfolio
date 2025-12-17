@@ -30,9 +30,9 @@
     "portfolio.title": "Meus <span>Projetos</span>",
     "projects.project1.title": "ERP Empresarial Web",
     "projects.project1.desc": "Aplicação completa feita com .NET Core no backend e React no frontend para gerenciamento de recursos empresariais.",
-    "projects.project2.title": "Monitoramento de Infraestrutura",
+    "projects.project2.title": "Monitoramento da Infraestrutura",
     "projects.project2.desc": "Sistema de monitoramento de infraestrutura com visualização de dados em tempo real e alertas.",
-    "projects.project3.title": "Portal de Integração de API",
+    "projects.project3.title": "Portal de Integração de API's",
     "projects.project3.desc": "Interface moderna para consumo e integração de múltiplas APIs públicas e privadas.",
     "projects.details": "Detalhes",
 
@@ -89,7 +89,7 @@
     "projects.project1.desc": "Complete application built with .NET Core backend and React frontend for enterprise resource management.",
     "projects.project2.title": "Infrastructure Monitoring",
     "projects.project2.desc": "Infrastructure monitoring system with real-time data visualization and alerts.",
-    "projects.project3.title": "API Integration Portal",
+    "projects.project3.title": "API's Integration Portal",
     "projects.project3.desc": "Modern interface for consuming and integrating multiple public and private APIs.",
     "projects.details": "Details",
 
@@ -142,11 +142,11 @@
     "skills.database": "Base de Données",
 
     "portfolio.title": "Mes <span>Projets</span>",
-    "projects.project1.title": "ERP Web d'Entreprise",
+    "projects.project1.title": "ERP web d'entreprise",
     "projects.project1.desc": "Application complète avec backend en .NET Core et frontend en React pour la gestion des ressources d'entreprise.",
-    "projects.project2.title": "Surveillance d'Infrastructure",
-    "projects.project2.desc": "Système de surveillance d'infrastructure avec visualisation des données en temps réel et alertes.",
-    "projects.project3.title": "Portail d'Intégration API",
+    "projects.project2.title": "Surveillance de l'infrastructure",
+    "projects.project2.desc": "Système de surveillance de l'infrastructure avec visualisation des données en temps réel et alertes.",
+    "projects.project3.title": "Portail d'intégration des API's",
     "projects.project3.desc": "Interface moderne pour la consommation et l'intégration de plusieurs API publiques et privées.",
     "projects.details": "Détails",
 
